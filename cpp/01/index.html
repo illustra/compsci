@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 1</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top" />
+		
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+	
+		<h1>Lesson 1: Origins and Basics</h1>
+		<br>
+		<h3 class="muted">C++ Origins: First Class</h3>
+		- Made by Bjarne Stroustrup in 1979 (Ph.D. Thesis)<br>
+		- Simula - a language designed for simulations<br>
+		- Simula 67 - first language with "object-oriented programming" paradigm<br>
+		- C front: "C with Classes"<br>
+		- C++ ("C plus plus"): The new "C with Classes" was born in 1983.<br>
+		- The "++" in "C++" was a pun on the incremental operator "++" and the<br>
+		original C language.<br>
+		<br>
+		C code is compatible with C++ <a href="#compile">compilers</a>, <i>but not the other way round.</i><br>
+		<br>
+		Dennis Ritchie, along with his companion Ken Lane Thompson, created the<br>
+		original C language and the UNIX operating system.<br>
+		Ken Thompson created <b>BCPL</b> (Basic Combined Programming Language),<br>
+		the predecessor of the B programming language made for Bell Labs (now AT&T).<br>
+		<br>
+		
+		<h3 class="muted">Basics</h3>
+		Structure of the main() function<br>
+		(Text preceded by "//" are comments and are not part of the actual code.)<br>
+		<pre class='brush: cpp'>
+			// Let's borrow code from 'iostream' and 'cstdlib'
+			#include &lt;iostream>
+			#include &lt;cstdlib>
+			using namespace std;
+			
+			int main() // The main function of the program
+			{
+			&nbsp;&nbsp;&nbsp;&nbsp;// declaration statements go at the top of the code
+			&nbsp;&nbsp;&nbsp;&nbsp;int variable1 = 3;
+				
+			&nbsp;&nbsp;&nbsp;&nbsp;// program statements go after declaration
+			&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; variable1 &lt;&lt; endl;
+				
+			&nbsp;&nbsp;&nbsp;&nbsp;// we're done
+			&nbsp;&nbsp;&nbsp;&nbsp;return 0; // Since main() has "int" before it, we will return an integer value
+			}
+		</pre>
+		
+		<div id="compile">
+			<h3 class="muted">How are C++ programs made?</h3>
+			First, a human (like you!) types the code into a program like, say, Code::Blocks.<br><br>
+			Then, Code::Blocks will run its "compiler" that will "translate" the code you<br>
+			typed into a language that your computer understands, like binary. It also does<br>
+			the same thing with the files referred to by the "#include" statements at the<br>
+			top of your code. (These files, like "iostream", are called <i>headers</i>, which you can think<br>
+			about as tools to help your code run on a computer.)<br><br>
+			Finally, to run your shiny new program, Code::Blocks will now run its "linker"<br>
+			which will "link" together all the translated code (your code and the header files) into<br>
+			one single application that you can run. :D
+		</div>
+		
+		<br><br>
+		<a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../02">Next Lesson &rarr;</a>
+	</body>
+</html>

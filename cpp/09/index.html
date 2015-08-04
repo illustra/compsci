@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 9</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+
+		<style type="text/css">
+			p {
+				width: 70%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			div.code {
+				width: 70%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 9: Two-dimensional Arrays</h1>
+		
+		<h3 class="muted">Definition</h3>
+		<p>Like the one-dimensional arrays we discussed in Lesson 7, a two-dimensional array is a series of consecutive
+			memory spaces that store values of the data type that the array was declared as.<br>
+			The difference between 1D and 2D arrays is that 2D arrays have a concept of rows and columns, so each element's index
+			contains its row and column number.<br>
+			(Think of a 2D array as a Cartesian plane, and an array element is a point along that plane.)</p>
+		
+		<h3 class="muted">Syntax</h3>
+		<div class="code">
+			<pre class='brush: cpp'>
+				// data_type arrayName[numberOfRows][numberOfColumns];
+				int 2019periodicExamScores[8][30];
+			</pre>
+		</div><br>
+		
+		<h3 class="muted">Modifying 2D Array Elements</h3>
+		<p>To avoid illogical behavior in your program, it is best to give each element a value right after declaring the array.<br>
+			To modify a single element, follow this syntax:</p>
+		
+		<div class="code">
+			<pre class='brush: cpp'>
+				// arrayName[row][column] = value;
+				
+				2019periodicExamScores[0][0] = 30;       // 1st student in Adelfa
+				2019periodicExamScores[1][0] = 46;       // 1st student in Camia
+				...
+			</pre>
+		</div><br>
+
+		<p>However, when managing large arrays, using loops are more efficient than hardcoding values for each element. See the example
+			below:</p>
+
+		<div class="code">
+			<pre class='brush: cpp'>
+				for ( int i = 0; i < numberOfRows; i++ )
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;for ( int j = 0; j < numberOfColumns; j++ )
+				&nbsp;&nbsp;&nbsp;&nbsp;{
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrayName[i][j] = value;
+				&nbsp;&nbsp;&nbsp;&nbsp;}
+				}
+			</pre>
+		</div>
+
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../08">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../10">Next Lesson &rarr;</a>
+	</body>
+</html>

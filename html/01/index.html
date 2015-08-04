@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>An Introduction to HTML</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    	<meta name="description" content="HTML Lesson 1">
+    	<meta name="author" content="Aurel Jared Dantis">
+		<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+		<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link id="shCore" rel="stylesheet" href="../../assets/css/shCoreDefault.css" />
+		<link id="shTheme" rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushJScript.js"></script>
+		<script src="../../assets/js/shBrushXml.js"></script>
+		<script type="text/javascript" src="../assets/js/jaredslessons.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title">
+				<h3>lesson 1</h3>
+				<h1></h1>
+			</div>
+			<div class="section">
+				<p><strong>HTML,</strong> which stands for <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage, is the language used
+				to make webpages like the one you're looking at now.</p>
+				<p>HTML files are no more than simple text files, so you would need a text editor to make your first webpage. Here are some recommendations:</p>
+				<ul class="recommendations">
+					<li><a href="http://sublimetext.com/" class="extlink">Sublime Text</a> <em>(unlimited free trial, $70 license)</em> &mdash;
+					This is my personal favorite. Sublime Text is a highly customizable Python-based text editor
+					that supports themes, plugins, and a myriad of syntaxes. Available for <i class="fa fa-apple"></i><i class="fa fa-windows"></i><i class="fa fa-linux"></i></li>
+					<li><a href="http://notepad-plus-plus.org/" class="extlink">Notepad++</a> <em>(free)</em> &mdash; This is a text editor that manages to be full-featured
+					yet extremely simple to use. Available for <i class="fa fa-windows"></i></li>
+					<li><a href="http://brackets.io/" class="extlink">Brackets</a> <em>(free)</em> &mdash; This is a text editor specifically designed for making webpages, equipped with the ability
+					to extract styles from Photoshop documents and quickly edit CSS styles of an element just with a simple keystroke. Available for
+					<i class="fa fa-apple"></i><i class="fa fa-windows"></i><i class="fa fa-linux"></i></li>
+				</ul>
+				<p>Good old Notepad will work as well, if you can't be bothered to install a new text editor. You'll be missing out on features such as code completion and syntax
+				highlighting, though. ;)</p>
+
+				<h2>Hello, world!</h2>
+				<p>Now that you've decided what text editor to use, type this in your text editor:</p>
+			</div>
+			<pre class="brush: xml; toolbar: false">
+				<p>This is my first HTML web page!</p></pre>
+			<div class="section">
+				<p>Save that as <code>index.html</code>, and open it with your preferred browser. It should look like this:</p>
+				<img src="hello.png"/>
+
+				<p>Congratulations! You've created your first webpage.</p>
+			</div>
+		</div>
+		<div id="prefs">
+			<div class="prefcontent">
+				<h4>Change theme</h4>
+				<table><tbody><tr>
+					<td onclick="switchTheme(0);">Day</td>
+					<td onclick="switchTheme(1);">Sepia</td>
+					<td onclick="switchTheme(2);">Night</td>
+				</tr></tbody></table>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="controlpanel">
+				<div class="left"><h1 id="title"></h1></div>
+				<div class="right">
+					<table><tbody><tr>
+						<td><a href="#" onclick="switchLessons(0);return false;"><i class="fa fa-chevron-left"></i></a></td>
+						<td><a href="../"><i class="fa fa-home"></i></a></td>
+						<td><a href="#" onclick="togglePrefs();return false;"><i class="fa fa-gear"></i></a></td>
+						<td><a href="#" onclick="switchLessons(1);return false;"><i class="fa fa-chevron-right"></i></a></td>
+					</tr></tbody></table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</body>
+</html>

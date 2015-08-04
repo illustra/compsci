@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 12</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+		<script type="text/javascript">
+			$('a[data-toggle="tooltip"]').tooltip({
+			    animated: 'fade',
+			    placement: 'bottom',
+			});
+		</script>
+
+		<style type="text/css">
+			p {
+				width: 55%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			div.code {
+				width: 70%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 12: Variable Scope</h1>
+		
+		<h3 class="muted">Definition</h3>
+		<p>A variable's scope defines the area within the code where it can be used.<br><br>
+			It can either be <b>global</b> (can be used anywhere in the code), or <b>local</b> (can be used only in the function where it was declared).</p><br>
+		
+		<h3 class="muted">Example</h3>
+		<div class="code">
+			<pre class='brush: cpp'>
+				// Global variables are declared outside all function definitions
+				int x;
+
+				// Local variables can be used only in the function it was declared in
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int y;
+				}
+			</pre>
+		</div><br>
+
+		<h3 class="muted">Name Hiding and the Scope Resolution Operator (<code>::</code>)</h3>
+		<p>If a local variable has the same name as a global variable, the local variable will be respected in the corresponding function; unless the scope resolution operator is used.</p>
+		<div class="code">
+			<pre class='brush: cpp'>
+				// Global variable "x"
+				int x = 1;
+
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;// Local variable "x"
+				&nbsp;&nbsp;&nbsp;&nbsp;int x = 2;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;cout << x;     // The local variable will be displayed, e.g. "2"
+				&nbsp;&nbsp;&nbsp;&nbsp;cout << ::x;     // The global variable will be displayed, e.g. "1"
+				}
+			</pre>
+		</div>
+
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../11">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" disabled="" href="../">Congratulations! You're done.</a>
+	</body>
+</html>

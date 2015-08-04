@@ -1,0 +1,18 @@
+lessonlist = [
+	{
+		"name": "An Introduction to HTML",
+		"disabled": false
+	},{
+		"name": "Correct HTML Markup",
+		"disabled": false
+	},{
+		"name": "Different HTML Tags",
+		"disabled": true
+	},{
+		"name": "An Introduction to CSS",
+		"disabled": true
+	},{
+		"name": "Styling Text and Images",
+		"disabled": true
+	}
+]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 5</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 5: The while / do-while Loops</h1>
+		<br>
+		
+		<h2 class="muted">while</h2>
+		This loop repeats the given statement(s) while the boolean expression is true. The boolean expression<br>
+		is evaluated before executing the loop body; thus it is called a <b>precondition / pre-test loop.</b><br>
+		
+		<h3 class="muted">Syntax</h3>
+		<div style="width: 350px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				&nbsp;&nbsp;&nbsp;&nbsp;// Single statement
+				&nbsp;&nbsp;&nbsp;&nbsp;while ( boolean expression )
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;// Multiple statements
+				&nbsp;&nbsp;&nbsp;&nbsp;while ( boolean expression )
+				&nbsp;&nbsp;&nbsp;&nbsp;{
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement 1
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement 2
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement 3
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement n
+				&nbsp;&nbsp;&nbsp;&nbsp;}
+			</pre>
+		</div>
+		
+		<h2 class="muted">do-while Loop</h2>
+		This loop, unlike the while loop, does not check if the boolean expression is true<br>
+		before it executes the statements for the first time; rather, it checks after the statement(s) 
+		is/are executed. Thus it is called a <b>postcondition / post-test loop.</b><br>
+		
+		<h3 class="muted">Syntax</h3>
+		<div style="width: 350px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				&nbsp;&nbsp;&nbsp;&nbsp;do
+				&nbsp;&nbsp;&nbsp;&nbsp;{
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement 1
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement 2
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement 3
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// statement n
+				&nbsp;&nbsp;&nbsp;&nbsp;} while ( boolean expression );
+			</pre>
+		</div>
+		
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../intro-loops">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../06">Next Lesson &rarr;</a>
+	</body>
+</html>

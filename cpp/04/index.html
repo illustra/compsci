@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 4</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 4: Data Types in C++</h1>
+		Most of the time, we need different data types to store values in. Some types<br>
+		are suitable for specific situations; others arent. It all really depends on what<br>
+		you're going to use the value for.<br>
+		
+		<br>
+		<h2 class="muted">Basic Data Types</h2>
+		<div class="panel panel-default" style="width: 1000px;margin: 0 auto;">
+			<div class="panel-body">
+				<table style="text-align: left; width: 100%;">
+					<tr>
+						<th>Type</th>
+						<th>Size in Bytes</th>
+						<th>Unsigned Digit Range</th>
+						<th>Digit Precision</th>
+						<th>Value Type</th>
+					</tr>
+					<tr>
+						<td>short int</td>
+						<td>2</td>
+						<td>-32,768 ~ 32,767</td>
+						<td>-</td>
+						<td>integer</td>
+					</tr>
+					<tr>
+						<td>int</td>
+						<td>4 (32-bit)</td>
+						<td>-2,147,483,648 ~ 2,147,483,647</td>
+						<td>-</td>
+						<td>integer</td>
+					</tr>
+					<tr>
+						<td>long int</td>
+						<td>4 (64-bit, depending on platform)</td>
+						<td></td>
+						<td>-</td>
+						<td>integer</td>
+					</tr>
+					<tr>
+						<td>long long</td>
+						<td>8</td>
+						<td>-9,223,372,036,854,775,807 ~ 9,223,372,036,854,775,807</td>
+						<td>-</td>
+						<td>integer</td>
+					</tr>
+					<tr>
+						<td>char</td>
+						<td>1</td>
+						<td>256 ASCII values</td>
+						<td>-</td>
+						<td>integer</td>
+					</tr>
+					<tr>
+						<td>bool</td>
+						<td>1</td>
+						<td><b>1</b> (true) / <b>2</b> (false)</td>
+						<td>-</td>
+						<td>integer</td>
+					</tr>
+					<tr>
+						<td>float</td>
+						<td>4</td>
+						<td>Approx. 10<sup>-38</sup> to 10<sup>38</sup></td>
+						<td>7</td>
+						<td>floating-point</td>
+					</tr>
+					<tr>
+						<td>double</td>
+						<td>8</td>
+						<td>Approx. 10<sup>-308</sup> to 10<sup>308</sup></td>
+						<td>15</td>
+						<td>floating-point</td>
+					</tr>
+					<tr>
+						<td>double</td>
+						<td>10</td>
+						<td>Approx. 10<sup>-4932</sup> to 10<sup>4932</sup></td>
+						<td>19</td>
+						<td>floating-point</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<h2 class="muted">The const Modifier</h2>
+		This is a safety precaution programmers frequently use. When a variable is<br>
+		declared as a <b>constant</b> variable, the value stored in that variable cannot<br>
+		be changed anywhere on the program except on the declaration statement itself.<br>
+		Constant variables are conventionally named with capital letters.
+		
+		<h3 class="muted">Example</h3>
+		<div style="width: 400px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				const float EVAT = 0.12;
+				const short int PASSING_GRADE = 60;
+			</pre>
+		</div>
+		
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../03">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../intro-loops">Next Lesson &rarr;</a>
+	</body>
+</html>

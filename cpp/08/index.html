@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 8</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 8: Strings</h1>
+		
+		<h3 class="muted">Definition</h3>
+		It's simple: a string in C++ is an object that contains a group of characters.<br>
+		We use strings in C++ to store names, error messages, etc.<br>
+		
+		<h3 class="muted">Syntax</h3>
+		When using strings, we also need to include the strings library.<br>
+		For example, this code:<br>
+		<div style="width: 510px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				#include &lt;iostream&gt;
+				#include &lt;cstdlib&gt;
+				#include &lt;string&gt;
+				using namespace std;
+				
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;string name = "Aurel Jared Dantis";
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Hello, my name is " &lt;&lt; name &lt;&lt; '!' &lt;&lt; endl;
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+			</pre>
+		</div>
+		
+		will output the following text:<br><br>
+		
+		<img src="sample.png" width="677" height="345" />
+
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../07">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../09">Next Lesson &rarr;</a>
+	</body>
+</html>

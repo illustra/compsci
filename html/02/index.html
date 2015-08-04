@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Correct HTML Markup</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    	<meta name="description" content="HTML Lesson 1">
+    	<meta name="author" content="Aurel Jared Dantis">
+		<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+		<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link id="shCore" rel="stylesheet" href="../../assets/css/shCoreDefault.css" />
+		<link id="shTheme" rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushJScript.js"></script>
+		<script src="../../assets/js/shBrushXml.js"></script>
+		<script type="text/javascript" src="../assets/js/jaredslessons.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title">
+				<h3>lesson 2</h3>
+				<h1></h1>
+			</div>
+			<div class="section">
+				<p>
+					When making webpages, it is important that you follow a specific format, so that the browsers that you use to view your
+					pages with will display the page correctly.
+				</p>
+
+				<h2>Setting the document type (<code>DOCTYPE</code>)</h2>
+				<p>The document type tells the browser what kind of file it's viewing. In our case, since we're making HTML pages, we set the document
+				type to HTML as follows:</p>
+			</div>
+			<pre class="brush: xml; toolbar: false">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+					<!--html content here-->
+				&lt;/html&gt;</pre>
+			<div class="section">
+				<p>The <code>html</code> part will need to be changed as our content changes, but let's not focus on that right now.</p>
+
+				<h2>Proper tag nesting</h2>
+				<p>HTML tags can be <em>nested,</em> i.e. a tag can be placed inside another tag. Because of this, it is very important that you
+				open and close your tags properly. See this example:</p>
+			</div>
+			<pre class="brush: xml; toolbar: false">
+				&lt;!-- This is improperly nested --&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Hello world!&lt;/tr&gt;
+					&lt;/table&gt;
+				&lt;/tr&gt;
+
+				&lt;!-- This is properly nested --&gt;
+				&lt;table&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Hello world!&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;</pre>
+			<div class="section">
+				<p>Generally, tags that were opened first should be closed last, tags opened next should be closed before the last tag, ad infinitum.</p>
+				<p>There are also tags that do not need closing tags, which we will discuss in the next lesson.</p>
+			</div>
+		</div>
+		<div id="prefs">
+			<div class="prefcontent">
+				<h4>Change theme</h4>
+				<table><tbody><tr>
+					<td onclick="switchTheme(0);">Day</td>
+					<td onclick="switchTheme(1);">Sepia</td>
+					<td onclick="switchTheme(2);">Night</td>
+				</tr></tbody></table>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="controlpanel">
+				<div class="left"><h1 id="title"></h1></div>
+				<div class="right">
+					<table><tbody><tr>
+						<td><a href="#" onclick="switchLessons(0);return false;"><i class="fa fa-chevron-left"></i></a></td>
+						<td><a href="../"><i class="fa fa-home"></i></a></td>
+						<td><a href="#" onclick="togglePrefs();return false;"><i class="fa fa-gear"></i></a></td>
+						<td><a href="#" class="disabled"><i class="fa fa-chevron-right"></i></a></td>
+					</tr></tbody></table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</body>
+</html>

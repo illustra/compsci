@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 3</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 3: The <code>if-else</code> Statement</h1>
+		
+		<h3 class="muted">Purpose</h3>
+		It executes a statement (or a set of statements) if the condition<br>
+		specified is true.<br>
+		If the "else" keyword is specified, it will execute another statement<br>
+		(or set of statements) if the condition is false.
+		
+		<h3 class="muted">Syntax</h3>
+		
+		<div style="width: 350px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				&nbsp;&nbsp;&nbsp;&nbsp;// if statement
+				&nbsp;&nbsp;&nbsp;&nbsp;if ( boolean expression )
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// single statement
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;if ( boolean expression ) {
+				&nbsp;&nbsp;&nbsp;&nbsp;{
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// multiple statements
+				&nbsp;&nbsp;&nbsp;&nbsp;} 
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;// if-else statement
+				&nbsp;&nbsp;&nbsp;&nbsp;if ( boolean expression )
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// single statement
+				&nbsp;&nbsp;&nbsp;&nbsp;else
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// single statement
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;if ( boolean expression ) {
+				&nbsp;&nbsp;&nbsp;&nbsp;{
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// multiple statements
+				&nbsp;&nbsp;&nbsp;&nbsp;}
+				&nbsp;&nbsp;&nbsp;&nbsp;else
+				&nbsp;&nbsp;&nbsp;&nbsp;{
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// multiple statements
+				&nbsp;&nbsp;&nbsp;&nbsp;}
+			</pre>
+		</div>
+		
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../02">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../04">Next Lesson &rarr;</a>
+	</body>
+</html>

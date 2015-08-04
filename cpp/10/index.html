@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 10</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+		<script type="text/javascript">
+			$('a[data-toggle="tooltip"]').tooltip({
+			    animated: 'fade',
+			    placement: 'bottom',
+			});
+		</script>
+
+		<style type="text/css">
+			p {
+				width: 70%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			div.code {
+				width: 70%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 10: Functions</h1>
+		
+		<h3 class="muted">Definition</h3>
+		<p>Functions are independent <a href="#" data-toggle="tooltip" title="Blocks of code. CodeBlocks. Get it?">blocks of code</a> that perform a specific job or fulfill a specific purpose.<br>
+			A function can call (execute) other functions, and can even call itself; but that
+			is not recommended.<br>
+			<code>main()</code> is a special function because it is always the first function that gets executed<br>
+			when you run your program. That's why it's called the <i>driver function</i>, because it has the power<br>
+			to call any other function when your program is run.</p><br>
+		
+		<h3 class="muted">Syntax</h3>
+		<div class="code">
+			<pre class='brush: cpp'>
+				// Declare function first: data_type functionName(arguments);
+				int squareRoot(int number);
+
+				// Then define the function: data_type functionName(arguments) {}
+				int squareRoot(int number)
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;// statements go here
+				}
+			</pre>
+		</div><br>
+
+		<h3 class="muted">Data Types and the <code>return</code> Statement</h3>
+		<p>
+			The data types you can declare a function as are essentially the same as <a href="../04/">the data types</a>
+			you can declare variables as.<br>
+			The purpose of the data type is to determine what kind of value the function will "return"<br>
+			to whatever function called it when it has finished running.<br><br>
+
+			For example, if your function was declared as <code>int</code>, your return statement should contain an integer value or variable:
+		</p>
+		<div class="code">
+			<pre class='brush: cpp'>
+				int function()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+
+				int anotherFunction()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int someVariable = 1;
+				&nbsp;&nbsp;&nbsp;&nbsp;return someVariable;
+				}
+			</pre>
+		</div>
+		<p>Same goes for pretty much every other data type, except for <code>void</code>, which does not return anything:</p>
+		<div class="code">
+			<pre class='brush: cpp'>
+				void function()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;return;
+				}
+			</pre>
+		</div>
+		<p>Basically, the return function does two things:<br> <b>1)</b> tell the system that the function has finished running, and<br>
+			<b>2)</b> give back a value to whatever function called it, as a kind of "result".</p><br>
+		
+		<h3 class="muted">Local and Global Variables</h3>
+		<p>Local variables can only be used in the function where they were declared.<br>
+			Global variables can be used in <i>any</i> function in the same program.</p>
+		
+		<div class="code">
+			<pre class='brush: cpp'>
+				// Declare global variables outside all functions
+				float worldPopulation = 7.0e9;
+				
+				void Philippines()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;// Declare local variables inside the function they will be used in
+				&nbsp;&nbsp;&nbsp;&nbsp;float localPopulation = (worldPopulation / 7) / 10;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;return;
+				}
+			</pre>
+		</div><br>
+
+		<h3 class="muted">Arguments</h3>
+		<p>Arguments are basically just variables that you give to a function so it has something to work on.</p>
+		<div class="code">
+			<pre class='brush: cpp'>
+				int squareNum(int number);
+
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int enteredValue;
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;cout << "Enter a number: ";
+				&nbsp;&nbsp;&nbsp;&nbsp;cin >> enteredValue;
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;cout << "The square of the number you entered is " << squareNum(enteredValue) << '.';
+				&nbsp;&nbsp;&nbsp;&nbsp;cout << endl << endl;
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+
+				int squareNum(int number)
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int square = number * number;
+				&nbsp;&nbsp;&nbsp;&nbsp;return square;
+				}
+			</pre>
+		</div>
+		<p>In the example above, the <code>main()</code> function gives the number stored in <code>enteredValue</code> to<br>
+			<code>squareNum()</code>, who then stores the value in the argument <code>number</code>.<br>
+			It gets the square of <code>number</code> and stores the result in <code>square</code>, then gives the value<br>
+			stored in <code>square</code> back to <code>main()</code> in order to be displayed.</p>
+
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../09">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../cmd-args">Next Lesson &rarr;</a>
+	</body>
+</html>

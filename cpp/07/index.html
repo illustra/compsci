@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 7</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 7: Arrays</h1>
+		
+		<h3 class="muted">Definition</h3>
+		An array is a series of allocated memory spaces, one after the other (contiguous). Each<br>
+		memory space is able to contain only the data type that the array was declared as.
+		
+		<h3 class="muted">Syntax</h3>
+		<div style="width: 500px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				// data_type array_name[numberOfMemorySpaces];
+				short int gradeEight[8];
+			</pre>
+		</div>
+		
+		<h3 class="muted">Modifying Array Elements</h3>
+		A programmer must declare each array element right after declaring the array itself, to<br>
+		avoid garbage data being assigned to the array.<br><br>
+		Now, to access an element in an array, we refer to the array's index. The <b>index</b> is<br>
+		just a set of numbers <b>beginning from 0</b> that refer to each element in the array.<br><br>
+		For example, to access the first two elements in the array we declared above:
+		
+		<div style="width: 500px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				// array_name[indexNumber] = value;
+				
+				gradeEight[0] = 30;         // 30 students in Adelfa
+				gradeEight[1] = 29;         // 29 students in Camia
+				...
+			</pre>
+		</div>
+		
+		<h3 class="muted">Full Example</h3>
+		<div style="width: 550px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				#include &lt;iostream&gt;
+				#include &lt;cstdlib&gt;
+				using namespace std;
+
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[0] = 30;      // 30 students in Adelfa
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[1] = 29;      // 29 students in Camia
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[2] = 30;      // 30 students in Champaca
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[3] = 29;      // 29 students in Dahlia
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[4] = 28;      // 28 students in Ilang-ilang
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[5] = 30;      // 30 students in Jasmin
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[6] = 29;      // 29 students in Rosal
+				&nbsp;&nbsp;&nbsp;&nbsp;gradeEight[7] = 30;      // 30 students in Sampaguita
+				}
+			</pre>
+		</div>
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../06">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../07">Next Lesson &rarr;</a>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro|Lora);
+
+/* Base page styles */
+html { background-color: #fff; }
+body { margin: 0; padding: 2em 0px 75px 0px; }
+.content { 
+	width: 700px;
+	margin: 0 auto;
+}
+@media screen and (min-width: 640px) and (max-width: 768px) { .content { width: 600px; } }
+@media screen and (min-width: 481px) and (max-width: 640px) { .content { width: 450px; } }
+@media screen and (min-width: 321px) and (max-width: 480px) { .content { width: 300px; } }
+@media screen and (min-width: 0px) and (max-width: 320px) { .content { width: 280px; } }
+
+/* Page themes */
+html.sepia { background-color: #f9f1e3; }
+html.night { background-color: #000; }
+html, .controls {
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+
+/* General text styles */
+h1, h2, h3, h4, .section p, li {
+	text-align: center;
+	color: #000;
+	font-family: 'Lora', 'Garamond', 'Times New Roman', serif;
+}
+.section p, li { text-align: left; font-size: 16px; line-height: 1.5em; }
+.section h2 { text-align: left; padding-top: 20px; }
+h1, h2, h3, h4 { margin-bottom: 0; font-weight: 700; }
+code, pre { font-family: 'Source Code Pro', 'Menlo', 'Consolas', monospace; }
+code { font-size: 14px; }
+h2 code { font-size: 18px; font-weight: 400; }
+.sepia h1, .sepia h2, .sepia h3, .sepia td, .sepia th,
+.sepia h4, .sepia .section p, .sepia li { color: #50341b; }
+.night h1, .night h2, .night h3, .night td, .night th,
+.night h4, .night .section p, .night li { color: #e5e5e5; }
+a, a:hover, a:focus {
+	text-decoration: none;
+	color: #5976b8;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+a:hover { color: #000; }
+.night a:hover { color: #fff; }
+.title h3 {
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 12px;
+	color: #adadad;
+}
+table {
+	width: 100%;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 8px 0px;
+}
+.sepia table { border-color: rgba(80,52,27,0.5); }
+th, td { text-align: left; font-family: 'Lora', 'Garamond', 'Times New Roman', serif; }
+
+/* Per-section styles */
+.title { padding-bottom: 20px; }
+.end { padding-top: 20px; }
+.end h3 {
+	text-align: right;
+	color: #adadad;
+}
+.syntaxhighlighter { padding: 10px 0px; }
+.recommendations i { padding: 0px 5px; color: #929292; }
+.recommendations li:nth-child(2) { padding: 10px 0px; }
+.section img {
+	width: 100%;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 8px gray;
+	-moz-box-shadow: 0px 0px 8px gray;
+	-o-box-shadow: 0px 0px 8px gray;
+	box-shadow: 0px 0px 8px gray;
+}
+
+/* Lesson nav */
+.controls {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid #e7e7e7;
+	background-color: #fff;
+	display: table;
+}
+.sepia .controls { border-top: 1px solid rgba(80,52,27,0.5); background-color: #f9f1e3; }
+.night .controls { border-top: 1px solid #414141; background-color: #000; }
+.controlpanel {
+	position: absolute;
+	padding: 9px 0px 0px 0px;
+	width: 100%;
+	height: 100%;
+	display: table-row;
+}
+.left, .right { position: fixed; display: table-cell; }
+.left { left: 15px; }
+.right { right: 10px; }
+#title {
+	margin-top: 0;
+	font-size: 18px;
+	text-align: left;
+}
+.right td { padding-left: 10px; }
+.right a { color: #b8b8b8; }
+.right a:hover { color: #000; }
+.right a.disabled:hover { cursor: default; color: #b8b8b8 !important; }
+.sepia .right a:hover { color: #50341b; }
+.night .right a:hover { color: #fff; }
+#prefs {
+	display: none;
+	position: fixed;
+	bottom: 48px;
+	right: 5px;
+	width: 200px;
+	height: 60px;
+	background-color: #fff;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 5px gray;
+	-moz-box-shadow: 0px 0px 5px gray;
+	box-shadow: 0px 0px 5px gray;
+}
+.prefcontent {
+	width: 100%;
+	padding: 10px 0px;
+}
+.prefcontent table {
+	padding-top: 5px;
+	width: 200px;
+}
+.prefcontent td:nth-child(2) {
+	background-color: #f9f1e3;
+	color: #50341b;
+}
+.prefcontent td:nth-child(3) {
+	background-color: #000;
+	color: #e8e8e8;
+}
+.prefcontent td {
+	text-align: center;
+	font-size: 14px;
+	padding: 5px 0px;
+	border-radius: 5px;
+	width: 33%;
+	cursor: pointer;
+}
+.prefcontent h4 { font-size: 12px; color: #b8b8b8; margin-top: 0; }
+.prefcontent h4, .prefcontent td { font-family: 'Helvetica', 'Arial', sans-serif; }

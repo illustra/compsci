@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 2</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 2: <code>cin</code>, <code>cout</code>, <code>endl</code>, and Escape Sequence <code>\n</code></h1>
+		<br>
+		
+		<h3 class="muted">Objects</h3>
+		<b>What are objects?</b> They're basically instances of code built from<br>
+		a <i>class</i>. To understand it better, compare a class to a blueprint;<br>
+		and an object is a house built from that blueprint.<br>
+		We'll discuss more about classes (probably) in the coming weeks.<br>
+		<br>
+		The two objects we discussed in class are 'cout' (console out)<br>
+		and 'cin' (console in). The first one prints data on the screen,<br>
+		the second one accepts inputs from the person using your program.<br>
+		<br>
+		'cout' is followed by " &lt;&lt; "data you want to display"; " while <br>
+		'cin' is followed by " &gt;&gt; variableYouWantToStoreTheUserInputIn; " .<br>
+		
+		<div style="width: 650px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				#include &lt;iostream>
+				#include &lt;cstdlib>
+				using namespace std;
+				
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int variable1;
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Enter a value:" &lt;&lt; endl;
+				&nbsp;&nbsp;&nbsp;&nbsp;cin &gt;&gt; variable1;
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; endl &lt;&lt; "The value you entered was " &lt;&lt; variable1 &lt;&lt; endl;
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+			</pre>
+		</div>
+		
+		<h3 class="muted">endl and '\n'</h3>
+		
+		These two basically do the equivalent of hitting the Enter<br>
+		key on your keyboard; they move your cursor to the next line.<br>
+		The only difference is where you put them.<br>
+		
+		<div style="width: 600px; margin: 0 auto;">
+			<pre class='brush: cpp'>
+				#include &lt;iostream>
+				#include &lt;cstdlib>
+				using namespace std;
+				
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "endl goes at the end of the C++ statement" &lt;&lt; endl;
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "while backslash-n goes inside quotes.\n";
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+			</pre>
+		</div>
+		
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../01">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../03">Next Lesson &rarr;</a>
+	</body>
+</html>

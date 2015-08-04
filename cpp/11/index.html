@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- aureljared.github.io -->
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>C++ Lesson 11</title>
+		<link href="../assets/img/logo.png" rel="shortcut icon">
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/css/ripples.min.css" rel="stylesheet">
+        <link href="../assets/css/material-wfont.css" rel="stylesheet">
+		<script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/ripples.min.js"></script>
+        <script src="../assets/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+		
+		<link rel="stylesheet" href="../../assets/css/shCore.css" />
+		<link rel="stylesheet" href="../../assets/css/shThemeDefault.css" />
+		<script src="../../assets/js/shCore.js"></script>
+		<script src="../../assets/js/shBrushCpp.js"></script>
+		<script>
+			SyntaxHighlighter.all()
+		</script>
+		<script type="text/javascript">
+			$('a[data-toggle="tooltip"]').tooltip({
+			    animated: 'fade',
+			    placement: 'bottom',
+			});
+		</script>
+
+		<style type="text/css">
+			p {
+				width: 55%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			div.code {
+				width: 70%;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	
+	<body style="margin: 0 auto; text-align: center; background-color: white; width: 100%;">
+		<div id="top"/>
+		
+		<a class="btn btn-flat btn-default" href="../">&uarr; Back to Lessons</a>
+		
+		<h1>Lesson 11: Argument Evaluation</h1>
+		
+		<h3 class="muted">What is it?</h3>
+		<p>Put simply, argument evaluation is the way a function uses the arguments passed to it; that is, if the function will only get a <i>reference</i> to the arguments or if it's going to get its own copy of the values stored in the arguments.<br></p><br>
+
+		<h3 class="muted">Pass-by-value</h3>
+		<p>In this method, the function gets its own copy of the values in the arguments.</p>
+		<div class="code">
+			<pre class='brush: cpp'>
+				bool isEvenNumber(int number);    // isEvenNumber accepts one integer argument named "number"
+				
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int enteredNumber;
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Enter a number: ";
+				&nbsp;&nbsp;&nbsp;&nbsp;cin &gt;&gt; enteredNumber;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;if ( isEvenNumber(enteredNumber) == true )    // the value in "enteredNumber" is copied into the argument "number"
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; enteredNumber &lt;&lt; "is even.";
+				&nbsp;&nbsp;&nbsp;&nbsp;else
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; enteredNumber &lt;&lt; "is odd.";
+
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+
+				bool isEvenNumber(int number)
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;// The value in "enteredNumber" is now also in "number"
+				&nbsp;&nbsp;&nbsp;&nbsp;if ( number == 0  || number % 2 == 0 )
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true;
+				&nbsp;&nbsp;&nbsp;&nbsp;else
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;
+				}
+			</pre>
+		</div><br>
+
+		<h3 class="muted">Pass-by-reference</h3>
+		<p>In this method, the function only gets a reference to the arguments; that is, the addresses of the arguments are given <i>instead of their actual values.</i><br>
+			So, any modifications made to the arguments will also occur in the calling function's variables.</p>
+		<div class="code">
+			<pre class='brush: cpp'>
+				void swapValues(int &num1, int &num2);
+
+				int main()
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int first = 3, second = 5;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Original values" &lt;&lt; endl
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; "   first: " &lt;&lt; first &lt;&lt; endl
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; "   second: " &lt;&lt; second &lt;&lt; endl &lt;&lt; endl;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;swapValues(value1,value2);
+
+				&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Exchanged values" &lt;&lt; endl
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; "   first: " &lt;&lt; first &lt;&lt; endl
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;&lt; "   second: " &lt;&lt; second &lt;&lt; endl;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+				}
+
+				void swapValues(int &num1, int &num2) // The address-of operator (&) says that only the addresses of the arguments will be used
+				{
+				&nbsp;&nbsp;&nbsp;&nbsp;int temp;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;temp = num1;
+				&nbsp;&nbsp;&nbsp;&nbsp;num1 = num2;
+				&nbsp;&nbsp;&nbsp;&nbsp;num2 = temp;
+
+				&nbsp;&nbsp;&nbsp;&nbsp;return;
+				}
+			</pre>
+		</div><br>
+		<p>All arguments are evaluated in a left-to-right manner; that is, <code>value1</code> will be passed as <code>num1</code>, <code>value2</code> as <code>num2</code>, and so on.</p>
+
+		<h3 class="muted">Real-life example</h3>
+		<p>Imagine that you had to e-mail a project quickly, but you are locked out of your account and you don't have the time to make a new one because the deadline's midnight and it's now 11:57 PM.<br>
+			Luckily your friend's online, and you ask him or her for help.<br>
+			You can either ask them to make or give you a new e-mail account <b>(pass-by-value)</b>, or ask for their e-mail address and password so you can use their account temporarily <b>(pass-by-reference)</b><br><br>
+			Either way, you need to accomplish one goal - and that is to e-mail the project.
+		</p>
+
+		<br><br>
+		<a class="btn btn-flat btn-default" href="../cmd-args">&larr; Previous Lesson</a> <a class="btn btn-flat btn-default" href="#top">Back to Top</a> <a class="btn btn-flat btn-default" href="../12">Next Lesson &rarr;</a>
+	</body>
+</html>

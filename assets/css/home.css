@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
+
+html {
+	background-color: #272727;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+html.html { background-color: #e34e2d; }
+html.cpp { background-color: #064481; }
+body { margin: 0; }
+.content { 
+	width: 700px;
+	height: 300px;
+	position: absolute;
+	top: calc(50% - 210px);
+	left: calc(50% - 350px);
+}
+@media screen and (min-width: 640px) and (max-width: 768px) { .content { width: 600px; left: calc(50% - 300px); } }
+@media screen and (min-width: 481px) and (max-width: 640px) { .content { width: 450px; left: calc(50% - 225px); } }
+@media screen and (min-width: 321px) and (max-width: 480px) { .content { width: 300px; left: calc(50% - 150px); } }
+@media screen and (min-width: 0px) and (max-width: 320px) { .content { width: 280px; left: calc(50% - 140px); } }
+
+h1, h3, h4 {
+	color: #fff;
+	text-align: center;
+	font-family: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+}
+h1, h4 { font-weight: 400; }
+h3 { font-weight: 300; }
+table { margin: 0 auto; width: 100%; padding: 10px 0px; }
+tr > td:first-child { text-align: right; }
+.lang { text-align: center; }
+#lang { width: 200px; margin: 0 auto; }
+@media screen and (min-width: 0px) and (max-width: 320px) { #lang { width: 140px; } }
+tr > td:last-child { text-align: left; }
+td i {
+	color: #fff;
+	cursor: pointer;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+td i:hover { color: #adadad; }
+.footer { font-size: 13px; }
+.footer img, .footer i { padding: 0px 3px; }
+.footer img {
+	width: 20px;
+	margin-bottom: -5px;
+}
+.preload { display: none; }
