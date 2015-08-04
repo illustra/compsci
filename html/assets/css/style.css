@@ -63,6 +63,7 @@ table {
 	padding: 8px 0px;
 }
 .sepia table { border-color: rgba(80,52,27,0.5); }
+.night table { border-color: #414141; }
 th, td { text-align: left; font-family: 'Lora', 'Garamond', 'Times New Roman', serif; }
 
 /* Per-section styles */
@@ -111,6 +112,11 @@ th, td { text-align: left; font-family: 'Lora', 'Garamond', 'Times New Roman', s
 	font-size: 18px;
 	text-align: left;
 }
+.right table {
+	width: initial;
+	border: none;
+	padding: 0;
+}
 .right td { padding-left: 10px; }
 .right a { color: #b8b8b8; }
 .right a:hover { color: #000; }
@@ -137,7 +143,10 @@ th, td { text-align: left; font-family: 'Lora', 'Garamond', 'Times New Roman', s
 .prefcontent table {
 	padding-top: 5px;
 	width: 200px;
+	border: none;
+	padding-bottom: 0;
 }
+.prefcontent td:first-child { color: #000 !important; }
 .prefcontent td:nth-child(2) {
 	background-color: #f9f1e3;
 	color: #50341b;
