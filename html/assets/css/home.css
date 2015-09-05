@@ -4,6 +4,10 @@ body {
     margin: 0;
     background-color: #f2f2f2;
 }
+.content {
+	width: 100%;
+	overflow-x: hidden;
+}
 .top {
 	position: fixed;
 	height: 5em;
@@ -103,9 +107,11 @@ h1, h2, h3 {
 @media screen and (max-width: 600px) {
 	.lesson, .interstitial { width: 100% }
 	.pad div:last-child > p:first-child { padding-top: .3em }
+	.footer { height: 8em }
 }
 .lesson h2 {
 	padding: 30px;
 	margin: 0;
 	color: #fff;
+	word-wrap: break-word;
 }
