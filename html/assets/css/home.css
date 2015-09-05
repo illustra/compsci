@@ -1,0 +1,111 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:500|Roboto+Mono:300,400,500');
+
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+}
+.top {
+	position: fixed;
+	height: 5em;
+	background-color: #689f38;
+	z-index: 3;
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.75);
+}
+.top h1 {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+a { text-decoration: none }
+.nav {
+	position: absolute;
+	top: 0.5em;
+	left: 2em;
+}
+.bottom, .content, .top, .bottom > div { width: 100% }
+.bottom {
+	display: inline-block;
+	margin-bottom: -3px;
+	padding-top: 12em;
+}
+.interstitial {
+	height: 50px;
+	max-width: 1240px;
+	margin: 0 auto;
+	color: #000;
+	text-align: right;
+}
+.footer-content { max-width: 1240px; margin: 0 auto; }
+.bottom a {
+	-webkit-transition: color .2s ease;
+	-moz-transition: color .2s ease;
+	transition: color .2s ease;
+	color: #888;
+}
+.bottom a:hover { color: #000 }
+.interstitial a { padding-left: 20px }
+.pad { padding: 0 16px }
+.footer {
+	height: 6em;
+	background-color: #fff;
+}
+.footer .pad > div { display: inline-block; width: 50% }
+.footer img { padding-top: 1.5em }
+.footer p {
+	font-family: 'Roboto', 'Helvetica', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	color: #555;
+}
+.pad div:last-child > p:first-child { padding-top: .8em }
+h1, h2, h3 {
+    font-family: 'Roboto Mono', 'Consolas', monospace;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+#lessons {
+	z-index: 0;
+	padding: 5em 0 0;
+	max-width: 1240px;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	list-style: none;
+}
+#lessons::after {visibility: hidden; clear: both}
+.lesson {
+	display: inline-block;
+	width: 50%;
+	padding: 0;
+	vertical-align: top;
+	height: 400px;
+	float: left;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	transition: all .2s ease;
+	background-size: cover;
+	background-position: center;
+}
+.lesson:hover {
+	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.6);
+}
+.bullet {
+	color: rgba(255,255,255,0.5);
+	padding: 0 5px;
+	font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+	.lesson, .interstitial { width: 100% }
+	.pad div:last-child > p:first-child { padding-top: .3em }
+}
+.lesson h2 {
+	padding: 30px;
+	margin: 0;
+	color: #fff;
+}
