@@ -35,16 +35,16 @@ function togglePrefs(){
 function switchTheme(themeNo){
 	if (!themeNo){
 		$('html').removeClass('sepia night');
-		$('#shCore').attr('href','../../assets/css/shCoreDefault.css');
-		$('#shTheme').attr('href','../../assets/css/shThemeDefault.css');
+		$('#shCore').attr('href','../../../assets/css/shCoreDefault.css');
+		$('#shTheme').attr('href','../../../assets/css/shThemeDefault.css');
 	} else if (themeNo == 1) {
 		$('html').attr('class','sepia');
-		$('#shCore').attr('href','../../assets/css/shCoreDefault.css');
-		$('#shTheme').attr('href','../../assets/css/shThemeDefault.css');
+		$('#shCore').attr('href','../../../assets/css/shCoreDefault.css');
+		$('#shTheme').attr('href','../../../assets/css/shThemeDefault.css');
 	} else if (themeNo == 2) {
 		$('html').attr('class','night');
-		$('#shCore').attr('href','../../assets/css/shCoreFadeToGrey.css');
-		$('#shTheme').attr('href','../../assets/css/shThemeFadeToGrey.css');
+		$('#shCore').attr('href','../../../assets/css/shCoreFadeToGrey.css');
+		$('#shTheme').attr('href','../../../assets/css/shThemeFadeToGrey.css');
 	}
 	mem.lessonTheme = themeNo;
 	return false;
