@@ -95,6 +95,10 @@
 					'desc': 'List item. For use with (un)ordered lists.'
 				},
 				{
+					'name': 'br',
+					'desc': 'Adds a line break, e.g. moves all succeeding text onto a new line.'
+				},
+				{
 					'name': 'span',
 					'desc': 'This is commonly used to style only part of a line of text. For example: <em><span style="color:red">These words</span> are colored red.</span></em>'
 				}
@@ -132,6 +136,8 @@
 					<tbody id="tagTable">
 					</tbody>
 				</table>
+				<p><em>Note:</em>&nbsp; <code>img, br, hr, and link</code> are tags that do not need closing tags
+				(e.g. <code>&lt;img src="feelsgoodman.jpg"&gt;</code> instead of <code>&lt;img src="feelsgoodman.jpg"&gt;&lt;/img&gt;</code>).</p>
 
 				<h2>Try it out!</h2>
 				<p>This is an example of an HTML document using some of the tags above:</p>
@@ -160,7 +166,14 @@
 				<div class="section">
 					<p>If you type that into your text editor and load it in your browser, it should look like this:</p>
 					<img src="hello.png"/>
+
+					<h2>Comments</h2>
+					<p>Just like any other programming/scripting language, you can insert comments into an HTML file.</p>
 				</div>
+				<pre class="brush: xml; toolbar: false">
+					&lt;!-- I am a comment! --&gt;
+
+					<p>Hello</p> &lt;!-- I am another comment! --&gt;</pre>
 		</div>
 		<div id="prefs">
 			<div class="prefcontent">
@@ -178,9 +191,9 @@
 				<div class="right">
 					<table><tbody><tr>
 						<td><a href="#" onclick="switchLessons(0);return false;"><i class="fa fa-chevron-left"></i></a></td>
-						<td><a href="../"><i class="fa fa-home"></i></a></td>
+						<td><a href="../../"><i class="fa fa-home"></i></a></td>
 						<td><a href="#" onclick="togglePrefs();return false;"><i class="fa fa-gear"></i></a></td>
-						<td><a href="#" class="disabled"><i class="fa fa-chevron-right"></i></a></td>
+						<td><a href="#" onclick="switchLessons(1);return false;"><i class="fa fa-chevron-right"></i></a></td>
 					</tr></tbody></table>
 				</div>
 			</div>

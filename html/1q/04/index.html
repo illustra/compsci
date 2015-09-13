@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>An Introduction to CSS</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    	<meta name="description" content="HTML Lesson 1">
+    	<meta name="author" content="Aurel Jared Dantis">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+		<style type="text/css">
+			td code {
+				font-family: 'Source Code Pro', 'Menlo', 'Consolas', monospace;
+				font-weight: 400;
+			}
+		</style>
+		<script type="text/javascript" src="../../../assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../../assets/css/shCore.css" />
+		<link id="shCore" rel="stylesheet" href="../../../assets/css/shCoreDefault.css" />
+		<link id="shTheme" rel="stylesheet" href="../../../assets/css/shThemeDefault.css" />
+		<script src="../../../assets/js/shCore.js"></script>
+		<script src="../../../assets/js/shBrushCss.js"></script>
+		<script type="text/javascript" src="../../assets/js/jaredslessons.js"></script>
+		<script type="text/javascript">
+			var props = [
+				// General
+				[{
+					'name': 'margin, padding',
+					'desc': 'Adds space around the element.',
+					'val': 'Integer. Ex.: <code>1em, 7px, 4cm.</code> See <a href="http://www.w3schools.com/css/css_margin.asp">this</a> for\
+					other ways of declaring values for margin/padding.'
+				},
+				{
+					'name': 'position',
+					'desc': 'Determines how the element is placed on the document.',
+					'val': '<code>static (default), fixed, absolute, relative, initial, inherit</code>'
+				},
+				{
+					'name': 'background',
+					'desc': 'Self-explanatory.',
+					'val': '<code>color image position/size repeat origin clip attachment.</code> <a href="http://www.w3schools.com/cssref/css3_pr_background.asp">More info.</a>'
+				},
+				{
+					'name': 'border',
+					'desc': 'Self-explanatory. Can be defined on individual sides (<code>border-bottom</code>).',
+					'val': '<code>border-width border-style border-color.</code> <a href="http://www.w3schools.com/cssref/pr_border.asp">More info.</a>'
+				}],
+				// Text
+				[{
+					'name': 'text-align',
+					'desc': 'Self-explanatory.',
+					'val': '<code>left (default), right, center</code>'
+				},
+				{
+					'name': 'color',
+					'desc': 'Self-explanatory.',
+					'val': 'Predefined values (<code>red, blue, etc.</code>),\
+					<br>hex (<code>#aabbcc</code>),<br>rgb/rgba (<code>rgb(123, 83, 57)</code>),\
+					<br>hsl (<code>hsl(36, 73%, 10%)</code>)'
+				},
+				{
+					'name': 'font-family',
+					'desc': 'Specifies what font to use.',
+					'val': 'Names (<code>"Times New Roman", "Arial"</code>),<br>\
+					types (<code>sans-serif, monospace</code>)'
+				},
+				{
+					'name': 'font-size',
+					'desc': 'Self-explanatory.',
+					'val': 'Integer. Ex.: <code>1em, 7px, 4cm.</code>'
+				},
+				{
+					'name': 'font-weight',
+					'desc': 'Specifies whether to use a bold, thin, light, etc. version of the font.',
+					'val': 'Predefined values (<code>bold, bolder</code>),<br>\
+					multiples of 100 between 0 to 1000'
+				},
+				{
+					'name': 'text-transform',
+					'desc': 'Specifies the capitalization of text.',
+					'val': '<code>none (default), lowercase, uppercase, capitalize, initial, inherit</code>'
+				}]
+			];
+			$(document).ready(function(){
+				for (var i = 0; i < props.length; i++) {
+					var container = document.getElementById('0'+i);
+					for (var j = 0; j < props[i].length; j++) {
+						var row = document.createElement('tr');
+						var cell1 = document.createElement('td');
+						var cell2 = document.createElement('td');
+						var cell3 = document.createElement('td');
+						cell1.innerHTML = props[i][j].name;
+						cell2.innerHTML = props[i][j].desc;
+						cell3.innerHTML = props[i][j].val;
+						row.appendChild(cell1);
+						row.appendChild(cell2);
+						row.appendChild(cell3);
+						container.appendChild(row);
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title">
+				<h3>lesson 4</h3>
+				<h1></h1>
+			</div>
+			<div class="section">
+				<p>We aren't confined to the boringness of Times New Roman in black when making webpages. We can make everything look the way we want to -
+				using something called <strong>Cascading Stylesheets</strong>, or CSS for short.</p>
+
+				<h2>Syntax</h2>
+			</div>
+			<pre class="brush: css; toolbar: false;">
+				selector {
+					property: value1 value2 ... valueN;
+				}</pre>
+			<div class="section">
+				<p>where <code>selector</code> can refer to an <code>element,</code> a <code>.class,</code> an <code>#id,</code>
+				a <code>::pseudo-element.</code> or a <code>:pseudo-class.</code> Go <a href="http://www.w3schools.com/cssref/css_selectors.asp">here</a>
+				to view all possible selectors.</p>
+
+				<p>Multiple selectors can have the same styles, too!</p>
+			</div>
+			<pre class="brush: css; toolbar: false;">
+				selector1, selector2, ... selectorN {
+					property: value;
+				}</pre>
+			<div class="section">
+				<p>Just like HTML, you can also insert comments into a CSS file.</p>
+			</div>
+			<pre class="brush: css; toolbar: false;">
+				/* I am a comment! */
+				selector {
+					property: value; /* I am another comment! */
+				}</pre>
+			<div class="section">
+				<h2>Properties</h2>
+				<p><em>Note:</em>&nbsp; There are a <u>lot</u> of properties available in CSS, and so I'm not going to enumerate them all. Head over to <a href="http://www.w3schools.com/css/default.asp">W3Schools</a> to see all possible properties.</p>
+
+				<h3>General properties</h3>
+				<table class="taglist">
+					<thead><tr>
+						<th>Prop.</th>
+						<th>Purpose</th>
+						<th>Possible values</th>
+					</tr></thead>
+					<tbody id="00">
+					</tbody>
+				</table>
+				<p>The difference between margin and padding is that margin only adds space around the element, while padding changes the size of the element; therefore
+				margins can overlap but padding cannot. Margins can also accept negative values.<br>
+				<a href="http://stackoverflow.com/a/2189462">Click this link</a> for an excellent illustration of the difference between the two.</p>
+
+				<h3>Text properties (p, h1, a, span, etc.)</h3>
+				<table class="taglist">
+					<thead><tr>
+						<th>Prop.</th>
+						<th>Purpose</th>
+						<th>Possible values</th>
+					</tr></thead>
+					<tbody id="01">
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="prefs">
+			<div class="prefcontent">
+				<h4>Change theme</h4>
+				<table><tbody><tr>
+					<td onclick="switchTheme(0);">Day</td>
+					<td onclick="switchTheme(1);">Sepia</td>
+					<td onclick="switchTheme(2);">Night</td>
+				</tr></tbody></table>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="controlpanel">
+				<div class="left"><h1 id="title"></h1></div>
+				<div class="right">
+					<table><tbody><tr>
+						<td><a href="#" onclick="switchLessons(0);return false;"><i class="fa fa-chevron-left"></i></a></td>
+						<td><a href="../../"><i class="fa fa-home"></i></a></td>
+						<td><a href="#" onclick="togglePrefs();return false;"><i class="fa fa-gear"></i></a></td>
+						<td><a href="#" class="disabled"><i class="fa fa-chevron-right"></i></a></td>
+					</tr></tbody></table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</body>
+</html>
