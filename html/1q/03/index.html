@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Different HTML Tags</title>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    	<meta name="description" content="HTML Lesson 1">
+    	<meta name="author" content="Aurel Jared Dantis">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+		<script type="text/javascript" src="../../../assets/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../../assets/css/shCore.css" />
+		<link id="shCore" rel="stylesheet" href="../../../assets/css/shCoreDefault.css" />
+		<link id="shTheme" rel="stylesheet" href="../../../assets/css/shThemeDefault.css" />
+		<script src="../../../assets/js/shCore.js"></script>
+		<script src="../../../assets/js/shBrushJScript.js"></script>
+		<script src="../../../assets/js/shBrushXml.js"></script>
+		<script type="text/javascript" src="../../assets/js/jaredslessons.js"></script>
+		<script type="text/javascript">
+			var tagTable = [
+				{
+					'name': '!DOCTYPE html',
+					'desc': 'This is not really a tag; rather, it tells the browser what kind of document it is reading. In our case, we\
+					declare our documents to be HTML.<br/>\
+					<strong>This should always be present and is always the first thing inside your HTML file!</strong>'
+				},
+				{
+					'name': 'html',
+					'desc': 'This tag contains everything else in your webpage. Never forget it!'
+				},
+				{
+					'name': 'head',
+					'desc': 'This tag contains information about your webpage, such as its title and how it is supposed to look (CSS).'
+				},
+				{
+					'name': 'title',
+					'desc': 'This tag contains the text that will be displayed on the browser tab of the page.'
+				},
+				{
+					'name': 'link',
+					'desc': 'This tag contains references to external files, such as CSS stylesheets, that will be used in the webpage.'
+				},
+				{
+					'name': 'style',
+					'desc': 'This tag contains internal CSS declarations.'
+				},
+				{
+					'name': 'body',
+					'desc': 'This tag contains everything you can see in your webpage. It can also contain JavaScript code.'
+				},
+				{
+					'name': 'p',
+					'desc': 'Paragraphs. Text before and after this tag will be on separate lines.'
+				},
+				{
+					'name': 'h1, h2, ... h6',
+					'desc': 'Headings. These serve as titles for a document or a part of a document, and automatically creates\
+					space before and after it. <strong>h1</strong> is the biggest, while <strong>h6</strong> is the smallest.'
+				},
+				{
+					'name': 'a',
+					'desc': 'Links. These are special snippets of text that, when clicked, can lead the user to a different page or section.\
+					They are also colored differently from other text; their default color is <span style="color:blue;">blue.</span>'
+				},
+				{
+					'name': 'strong, em, u',
+					'desc': 'Strong, emphasize, and underline tags make text bold, italicized, and underlined, respectively.'
+				},
+				{
+					'name': 'img',
+					'desc': 'Images. These can refer to image files in the same folder, website, or in another website entirely.'
+				},
+				{
+					'name': 'div',
+					'desc': 'Divisions. These are sections or parts of a webpage. By default, the browser places line breaks before and after divs.'
+				},
+				{
+					'name': 'table, ul, ol',
+					'desc': 'Tables, unordered lists, and ordered lists, respectively. Used to present data in an attractive manner.'
+				},
+				{
+					'name': 'thead, tbody',
+					'desc': 'Table head (the topmost row of a table), and table body (everything else), respectively.'
+				},
+				{
+					'name': 'tr',
+					'desc': 'Table row.'
+				},
+				{
+					'name': 'td',
+					'desc': 'Table data. This tag contains data that will be shown as a cell in a table.'
+				},
+				{
+					'name': 'li',
+					'desc': 'List item. For use with (un)ordered lists.'
+				},
+				{
+					'name': 'span',
+					'desc': 'This is commonly used to style only part of a line of text. For example: <em><span style="color:red">These words</span> are colored red.</span></em>'
+				}
+			]
+			$(document).ready(function(){
+				var container = document.getElementById('tagTable');
+				for (var i = 0; i < tagTable.length; i++) {
+					var row = document.createElement('tr');
+					var cell1 = document.createElement('td');
+					var cell2 = document.createElement('td');
+					cell1.innerHTML = tagTable[i].name;
+					cell2.innerHTML = tagTable[i].desc;
+					row.appendChild(cell1);
+					row.appendChild(cell2);
+					container.appendChild(row);
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title">
+				<h3>lesson 3</h3>
+				<h1></h1>
+			</div>
+			<div class="section">
+				<p>For convenience, HTML provides us with a myriad of tags, each with its own different intended purpose.</p>
+				<p>In this lesson, I'll be touching on the most common tags that you will encounter in the course.</p>
+
+				<table class="taglist">
+					<thead><tr>
+						<th>Tag</th>
+						<th>Purpose</th>
+					</tr></thead>
+					<tbody id="tagTable">
+					</tbody>
+				</table>
+
+				<h2>Try it out!</h2>
+				<p>This is an example of an HTML document using some of the tags above:</p>
+			</div>
+			<pre class="brush: xml; toolbar: false">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+					&lt;head&gt;
+						<title>Hello</title>
+					&lt;/head&gt;
+					&lt;body&gt;
+						<h1>I am a huge heading</h1>
+						<h6>I am a tiny heading</h6>
+						<ul>
+							<li>I am a bulleted list item</li>
+							<li>I am a bulleted list item</li>
+						</ul>
+						<ol>
+							<li>I am a numbered list item</li>
+							<li>I am a numbered list item</li>
+						</ol>
+
+						<p>The last word in this paragraph is <span style="color:red;">red.</span></p>
+					&lt;/body&gt;
+				&lt;html&gt;</pre>
+				<div class="section">
+					<p>If you type that into your text editor and load it in your browser, it should look like this:</p>
+					<img src="hello.png"/>
+				</div>
+		</div>
+		<div id="prefs">
+			<div class="prefcontent">
+				<h4>Change theme</h4>
+				<table><tbody><tr>
+					<td onclick="switchTheme(0);">Day</td>
+					<td onclick="switchTheme(1);">Sepia</td>
+					<td onclick="switchTheme(2);">Night</td>
+				</tr></tbody></table>
+			</div>
+		</div>
+		<div class="controls">
+			<div class="controlpanel">
+				<div class="left"><h1 id="title"></h1></div>
+				<div class="right">
+					<table><tbody><tr>
+						<td><a href="#" onclick="switchLessons(0);return false;"><i class="fa fa-chevron-left"></i></a></td>
+						<td><a href="../"><i class="fa fa-home"></i></a></td>
+						<td><a href="#" onclick="togglePrefs();return false;"><i class="fa fa-gear"></i></a></td>
+						<td><a href="#" class="disabled"><i class="fa fa-chevron-right"></i></a></td>
+					</tr></tbody></table>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</body>
+</html>

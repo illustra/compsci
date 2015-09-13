@@ -65,6 +65,12 @@ table {
 .sepia table { border-color: rgba(80,52,27,0.5); }
 .night table { border-color: #414141; }
 th, td { text-align: left; font-family: 'Lora', 'Garamond', 'Times New Roman', serif; }
+.taglist > tbody > tr td:first-child {
+	font-family: 'Source Code Pro', 'Menlo', 'Consolas', monospace;
+	font-weight: 400;
+}
+.taglist tr td:first-child { padding-right: 1em }
+tbody td { padding: .6em 0 }
 
 /* Per-section styles */
 .title { padding-bottom: 20px; }

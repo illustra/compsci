@@ -7,24 +7,29 @@
 		<meta name="author" content="Aurel Jared Dantis">
 		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/home.css">
-		<script type="text/javascript" src="assets/js/lessons.json"></script>
 		<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
 		<script type="text/javascript">
 			function listLessons(){
-				var list = JSON.parse(JSON.stringify(lessonlist));
-				var container = document.getElementById('lessons');
-				for (var i = 0; i < list.length; i++) {
-					var id = i+1;
-					var link = document.createElement('a');
-					var li = document.createElement('li');
-					var name = document.createElement('h2')
-					li.className = 'lesson';
-					li.setAttribute('style','background-image: url(0'+id+'/bg.jpg);');
-					name.innerHTML = list[i].replace(/ /g,'<span class="bullet">&#8226;</span>') + '<span class="bullet">&#172;</span>';
-					link.href = '0' + id;
-					li.appendChild(name);
-					link.appendChild(li);
-					container.appendChild(link);
+				var list = [
+					["An Introduction to HTML", "Correct HTML Markup",
+					"Different HTML Tags","An Introduction to CSS"]
+				];
+				for (var j = 1; j < 2; j++) {
+					var container = document.getElementById(j+'q');
+					for (var i = 0; i < list[j-1].length; i++) {
+						var id = i+1;
+						var link = document.createElement('a');
+						var li = document.createElement('li');
+						var name = document.createElement('h2')
+						li.className = 'lesson';
+						li.setAttribute('style','background-image: url('+j+'q/0'+id+'/bg.jpg);');
+						console.log(j);
+						name.innerHTML = list[j-1][i].replace(/ /g,'<span class="bullet">&#8226;</span>') + '<span class="bullet">&#172;</span>';
+						link.href = j + 'q/0' + id;
+						li.appendChild(name);
+						link.appendChild(li);
+						container.appendChild(link);
+					}
 				}
 			};
 			window.onload = listLessons;
@@ -34,10 +39,14 @@
 		<div class="content">
 			<div class="top">
 				<div class="nav">
-					<h1>HTML<span class="bullet">&#8226;</span>Lessons<span class="bullet">&#172;</span></h1>
+					<h1>HTML<span class="bullet">&#8226;</span>Notes<span class="bullet">&#172;</span></h1>
 				</div>
 			</div>
-			<ul id="lessons"></ul>
+			<div class="lesson-header"><h2>First Quarter</h2></div>
+			<ul class="lessons" id="1q"></ul>
+			<!--<ul class="lessons" id="2q"></ul>
+			<ul class="lessons" id="3q"></ul>
+			<ul class="lessons" id="4q"></ul>-->
 			<div class="bottom">
 				<div class="interstitial">
 					<div class="pad">
